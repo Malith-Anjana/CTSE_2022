@@ -27,7 +27,7 @@ spec:
       containers:
       - image: it19051376/ctse_2022:{{tag}}
         imagePullPolicy: Always
-        name: ctse-2022-jnf2s
+        name: ctse-2022-drsfp
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
