@@ -25,13 +25,13 @@ spec:
         app: test-sliit
     spec:
       containers:
-      - image: it19051376/ctse_2022:{{tag}}
+      - image: it19051376/ctse_2022:803282f5f7f044962934c41b26f98b3ebb1b7d0e
         imagePullPolicy: Always
-        name: ctse-2022-zdqc6
+        name: ctse-2022-jnf2s
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
-        ports: 
+        ports:
           - containerPort: 3000
       dnsPolicy: ClusterFirst
       restartPolicy: Always
