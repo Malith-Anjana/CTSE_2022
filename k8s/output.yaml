@@ -25,7 +25,7 @@ spec:
         app: test-sliit
     spec:
       containers:
-      - image: it19051376/ctse_2022:{{tag}}
+      - image: it19051376/ctse_2022:word2
         imagePullPolicy: Always
         name: ctse-2022-zdqc6
         resources: {}

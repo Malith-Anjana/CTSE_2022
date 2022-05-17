@@ -22,8 +22,10 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/ctse_2022:${{ github.sha }}
+    - name: Update coonfig files in k8s
+      run: sed -i.bak 's/{{tag}}/${{ github.sha }}/g' k8s/deploy.yaml && rm k8s/*.bak
     - uses: actions-hub/kubectl@master
       env:
         KUBE_CONFIG: ${{ SECRETS.KUBE_CONFIG }}
       with:
-        args: get namespaces 
+        args: apply -f ./k8s
